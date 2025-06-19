@@ -9,12 +9,12 @@ vertexai.init(project="BADASS", location="us-central1")
 model = GenerativeModel("gemini-1.5-pro")
 
 # Load secrets from environment
-JIRA_TOKEN = os.getenv("JIRA_TOKEN")
-JIRA_DOMAIN = os.getenv("JIRA_DOMAIN")
-CONFLUENCE_TOKEN = os.getenv("CONFLUENCE_TOKEN")
-CONFLUENCE_SPACE = os.getenv("CONFLUENCE_SPACE")
-CONFLUENCE_DOMAIN = os.getenv("CONFLUENCE_DOMAIN")
-TICKET_ID = os.getenv("TICKET_ID")  # e.g., ENG-100
+JIRA_TOKEN = os.getenv("ATATT3xFfGF0w2Bj0bnXtD4lQ5FE4fHC92sjgZIWT0hdWXv2-saLffMqgLgT9smzdpdvf7nePnsj0-qDFrk55HegKI1I8I1DfpGHaSCj3BuPb0nCG2tV-Q7wQyAbK-zZbHnHIVe6zx2qUMiumgFCKCAHyASjs0sdwfFaTG7DnbWo4yCxiSslWoY=E6F2F661")
+JIRA_DOMAIN = os.getenv("badassbot.atlassian.net")
+CONFLUENCE_TOKEN = os.getenv("ATATT3xFfGF0w2Bj0bnXtD4lQ5FE4fHC92sjgZIWT0hdWXv2-saLffMqgLgT9smzdpdvf7nePnsj0-qDFrk55HegKI1I8I1DfpGHaSCj3BuPb0nCG2tV-Q7wQyAbK-zZbHnHIVe6zx2qUMiumgFCKCAHyASjs0sdwfFaTG7DnbWo4yCxiSslWoY=E6F2F661")
+CONFLUENCE_SPACE = os.getenv("badass")
+CONFLUENCE_DOMAIN = os.getenv("blsi.atlassian.net/wiki")
+TICKET_ID = os.getenv("OPS-5")  # e.g., ENG-100
 
 # Get JIRA Issue
 jira_url = f"https://{JIRA_DOMAIN}/rest/api/3/issue/{TICKET_ID}"
