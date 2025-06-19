@@ -33,6 +33,6 @@ jobs:
 
       - name: Run generator
         run: |
-          python generate_doc.py
+          python doc.py
         env:
           TICKET_ID: ${{ github.event.inputs.ticket_id }}
