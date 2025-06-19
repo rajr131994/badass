@@ -11,11 +11,11 @@ jobs:
   generate-doc:
     runs-on: ubuntu-latest
     env:
-      JIRA_TOKEN: ${{ secrets.JIRA_TOKEN }}
-      JIRA_DOMAIN: ${{ secrets.JIRA_DOMAIN }}
-      CONFLUENCE_TOKEN: ${{ secrets.CONFLUENCE_TOKEN }}
-      CONFLUENCE_SPACE: ${{ secrets.CONFLUENCE_SPACE }}
-      CONFLUENCE_DOMAIN: ${{ secrets.CONFLUENCE_DOMAIN }}
+      JIRA_TOKEN: ATATT3xFfGF06ZVLWXo4-kAbV5tfJ4A9EqYjBBML4tz9AR6T8ZEZOjxY6o9vqLj28J5WgJtqFSEXXj7sMk7Q7xRF23oF73uylZKBfyHtQr5LiiQxqiuD7Lv7MHUUBseq3obmGYUMrVbQAqm89Lhf2FT-95MFSR0ReJki_099Ns0AaW9hQevc-U4=CFC639D9
+      JIRA_DOMAIN: badassbot.atlassian.net
+      CONFLUENCE_TOKEN: ATATT3xFfGF06ZVLWXo4-kAbV5tfJ4A9EqYjBBML4tz9AR6T8ZEZOjxY6o9vqLj28J5WgJtqFSEXXj7sMk7Q7xRF23oF73uylZKBfyHtQr5LiiQxqiuD7Lv7MHUUBseq3obmGYUMrVbQAqm89Lhf2FT-95MFSR0ReJki_099Ns0AaW9hQevc-U4=CFC639D9
+      CONFLUENCE_SPACE: badass
+      CONFLUENCE_DOMAIN: badassbot.atlassian.net
       GOOGLE_APPLICATION_CREDENTIALS: /tmp/gcloud.json
     steps:
       - uses: actions/checkout@v3
