@@ -16,6 +16,9 @@ CONFLUENCE_SPACE = os.getenv("badass")
 CONFLUENCE_DOMAIN = os.getenv("badassbot.atlassian.net/wiki")
 TICKET_ID = os.getenv("OPS-5")  # e.g., ENG-100
 
+print("JIRA_DOMAIN:", os.getenv("JIRA_DOMAIN"))
+print("TICKET_ID:", os.getenv("TICKET_ID"))
+
 # Get JIRA Issue
 jira_url = f"https://{JIRA_DOMAIN}/rest/api/3/issue/{TICKET_ID}"
 headers = {"Authorization": f"Bearer {JIRA_TOKEN}", "Accept": "application/json"}
