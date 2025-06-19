@@ -6,7 +6,7 @@ import json
 
 # Init Gemini
 vertexai.init(project="BADASS", location="us-central1")
-model = GenerativeModel("gemini-1.5-pro")
+model = GenerativeModel("gemini-2.0-flash")
 
 # Load secrets from environment
 JIRA_TOKEN = os.getenv("ATATT3xFfGF06ZVLWXo4-kAbV5tfJ4A9EqYjBBML4tz9AR6T8ZEZOjxY6o9vqLj28J5WgJtqFSEXXj7sMk7Q7xRF23oF73uylZKBfyHtQr5LiiQxqiuD7Lv7MHUUBseq3obmGYUMrVbQAqm89Lhf2FT-95MFSR0ReJki_099Ns0AaW9hQevc-U4=CFC639D9")
