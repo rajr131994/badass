@@ -20,7 +20,7 @@ print("JIRA_DOMAIN:", os.getenv("JIRA_DOMAIN"))
 print("TICKET_ID:", os.getenv("TICKET_ID"))
 
 # Get JIRA Issue
-jira_url = f"https://{JIRA_DOMAIN}/rest/api/3/issue/{TICKET_ID}"
+jira_url = f"https://badassbot.atlassian.net/rest/api/3/issue/OPS-5}"
 headers = {"Authorization": f"Bearer {JIRA_TOKEN}", "Accept": "application/json"}
 issue = requests.get(jira_url, headers=headers).json()
 
