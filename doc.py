@@ -13,7 +13,7 @@ JIRA_TOKEN = os.getenv("ATATT3xFfGF06ZVLWXo4-kAbV5tfJ4A9EqYjBBML4tz9AR6T8ZEZOjxY
 JIRA_DOMAIN = os.getenv("badassbot.atlassian.net")
 CONFLUENCE_TOKEN = os.getenv("ATATT3xFfGF06ZVLWXo4-kAbV5tfJ4A9EqYjBBML4tz9AR6T8ZEZOjxY6o9vqLj28J5WgJtqFSEXXj7sMk7Q7xRF23oF73uylZKBfyHtQr5LiiQxqiuD7Lv7MHUUBseq3obmGYUMrVbQAqm89Lhf2FT-95MFSR0ReJki_099Ns0AaW9hQevc-U4=CFC639D9")
 CONFLUENCE_SPACE = os.getenv("badass")
-CONFLUENCE_DOMAIN = os.getenv("blsi.atlassian.net/wiki")
+CONFLUENCE_DOMAIN = os.getenv("badassbot.atlassian.net/wiki")
 TICKET_ID = os.getenv("OPS-5")  # e.g., ENG-100
 
 # Get JIRA Issue
