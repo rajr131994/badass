@@ -1,0 +1,38 @@
+name: Generate Confluence Doc
+
+on:
+  workflow_dispatch:
+    inputs:
+      ticket_id:
+        description: 'JIRA Ticket ID'
+        required: true
+
+jobs:
+  generate-doc:
+    runs-on: ubuntu-latest
+    env:
+      JIRA_TOKEN: ${{ secrets.JIRA_TOKEN }}
+      JIRA_DOMAIN: ${{ secrets.JIRA_DOMAIN }}
+      CONFLUENCE_TOKEN: ${{ secrets.CONFLUENCE_TOKEN }}
+      CONFLUENCE_SPACE: ${{ secrets.CONFLUENCE_SPACE }}
+      CONFLUENCE_DOMAIN: ${{ secrets.CONFLUENCE_DOMAIN }}
+      GOOGLE_APPLICATION_CREDENTIALS: /tmp/gcloud.json
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Install dependencies
+        run: pip install google-cloud-aiplatform vertexai requests
+
+      - name: Setup Vertex credentials
+        run: echo "${{ secrets.GCP_SA_KEY }}" > /tmp/gcloud.json
+
+      - name: Run generator
+        run: |
+          python generate_doc.py
+        env:
+          TICKET_ID: ${{ github.event.inputs.ticket_id }}
