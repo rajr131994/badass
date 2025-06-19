@@ -5,7 +5,7 @@ import vertexai
 import json
 
 # Init Gemini
-vertexai.init(project="YOUR_PROJECT_ID", location="us-central1")
+vertexai.init(project="BADASS", location="us-central1")
 model = GenerativeModel("gemini-1.5-pro")
 
 # Load secrets from environment
